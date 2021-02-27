@@ -5,7 +5,7 @@ export default{
     //会员登录
     submitLogin(userInfo){
         return request({
-            url: 'user/login',
+            url: '/api/user/login',
             method: 'post',
             param: userInfo
         })
