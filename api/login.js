@@ -1,13 +1,13 @@
 import request from '@/utils/request'
-
+import qs from 'qs'
 export default{
 
     //会员登录
     submitLogin(userInfo){
         return request({
-            url: '/ucenter/member/login',
+            url: 'user/login',
             method: 'post',
-            data: userInfo
+            param: userInfo
         })
     },
 
