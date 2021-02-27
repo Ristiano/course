@@ -7,7 +7,7 @@ const service = axios.create({
   timeout: 20000 // 请求超时时间
 })
 
-
+axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 
 // HTTP request拦截器
 service.interceptors.request.use(
