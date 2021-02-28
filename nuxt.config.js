@@ -1,13 +1,12 @@
 module.exports = {
-    proxy: [
-        [
-          '/api',
-          {
-            target: 'http://47.113.82.4:8001', // api主机
-            pathRewrite: { '^/api' : '' }
-          }
-      ]
-    ],
+
+  proxy: {
+    '/user':{
+      target: 'http://47.113.82.4:8001',
+      ws: false, // 是否支持websocket
+      pathRewrite: { '^/user': '/user' }
+    }
+  },
   plugins: [
     { src: '~/plugins/nuxt-swiper-plugin.js', ssr: false }
   ],

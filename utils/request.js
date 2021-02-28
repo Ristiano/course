@@ -17,7 +17,7 @@ service.interceptors.request.use(
     if( cookie.get('guli_token')){
       //把获取cookie值放到header里面
 
-      config.headers['Authorization'] = cookie.get('guli_token')
+      // config.headers['Authorization'] = cookie.get('guli_token')
     }
     return config
   },
